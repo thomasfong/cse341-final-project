@@ -8,7 +8,6 @@ const port = process.env.PORT || PORT;
 
 app.use(bodyParser.json());
 // CORS middleware to allow cross-origin requests
-a
 // Use routes defined in routes/index.js
 app.use("/", require("./routes"));
 
@@ -21,8 +20,8 @@ mongodb.initDb((err) => {
   
     console.log("Connected to MongoDB ...");
     // Start the server once the DB is connected
-    app.listen(PORT, () => {
-      console.log(`Server is running on PORT ${PORT}`);
+    app.listen(port, () => {
+      console.log(`Server is running on PORT ${port}`);
     });
   });
   
