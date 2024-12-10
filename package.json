@@ -1,37 +1,19 @@
 {
   "name": "cse341-final-project",
   "version": "1.0.0",
-  "description": "",
-  "main": "server.js",
+  "description": "https://cse341-final-project-xtu9.onrender.com",
+  "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node server.js",
-    "dev": "nodemon server.js"
+    "start": "node server.js"
   },
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/DivineProjects/cse341-final-project.git"
-  },
+  "keywords": [],
   "author": "",
   "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/DivineProjects/cse341-final-project/issues"
-  },
-  "homepage": "https://github.com/DivineProjects/cse341-final-project#readme",
   "dependencies": {
-    "autogen": "^0.0.1",
-    "body-parser": "^1.20.3",
-    "dotenv": "^16.4.5",
-    "express": "^4.21.1",
-    "express-validator": "^7.2.0",
-    "mogodb": "^0.0.1-security",
-    "mongodb": "^6.11.0",
-    "swagger": "^0.7.5",
-    "swagger-autogen": "^2.23.7",
-    "swagger-ui-express": "^5.0.1"
-  },
-  "devDependencies": {
-    "nodemon": "^3.1.7"
-  },
-  "keywords": []
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "mongoose": "^8.8.4",
+    "swagger-autogen": "^2.23.7"
+  }
 }
