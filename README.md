@@ -6,6 +6,9 @@
 # Github
 https://github.com/DivineProjects/cse341-final-project
 
+# env 
+MONGODB_URI = mongodb+srv://jigudivinea:Dateng2018.@cluster0.7pmui.mongodb.net/cse341FinalProject
+
 # Database Collections
 classes
 exams
