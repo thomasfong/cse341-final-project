@@ -1,3 +1,1 @@
 GET http://localhost:8081/students
-
-GET http://localhost:8081/students/63e2c14e9a2b9c5f8f3e1a5d 
