@@ -62,7 +62,7 @@ const updateClass = async (req, res) => {
         room, 
         capacity 
     };
-    const result = await mongodb.getDatabase().collection('class').replaceOne({ _id: classDbId }, newClass);
+    const result = await mongodb.getDatabase().collection('classes').replaceOne({ _id: classDbId }, newClass);
     if (result.modifiedCount > 0) {
         res.status(204).send();
     } else {
