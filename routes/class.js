@@ -4,7 +4,7 @@ const classController = require('../controllers/classes');
 const validate = require('../middleware/validation-middleware');
 
 router.get("/", classController.getAll);
-router.get("/:ClassId", classController.getSingle);
+router.get("/:classId", classController.getSingle);
 router.post(
     '/',
     // validate.saveClass,

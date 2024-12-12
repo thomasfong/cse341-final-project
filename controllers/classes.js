@@ -13,16 +13,17 @@ const getAll = async (req, res) => {
 };
 
 const getSingle = async (req, res) => {
-    if (!ObjectId.isValid(req.params.id)) res.status(400).json('Must use a valid class ID to find class');
-
     //#swagger.tags=['classes']
-    const classId = new ObjectId(req.params.id.toString());
-    const result = mongodb.getDatabase().collection('classes').find({ _id: classId });
+    const classID = req.params.classId;
+    const result = mongodb.getDatabase().collection('classes').find({ classId: classID });
     result.toArray().then(classes => {
+        if (classes.length === 0) {
+            return res.status(404).json({ message: `${classID} not found` });
+          }
         res.setHeader('Content-Type', 'application/json');
         res.status(200).json(classes[0]);
     }).catch(err => {
-       console.log(err);
+        res.status(500).json({ message: "Error Fetching class" });
     });
 };
 
