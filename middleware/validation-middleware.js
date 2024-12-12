@@ -23,11 +23,6 @@ const saveStudent = async (req, res, next) => {
 
 const saveClass = async (req, res, next) => {
     const validationRule = {
-        "name": "required|string",
-        "age": "required|string",
-        "email": "required|string|email",
-        "enrollmentDate": "required|date",
-
         "classId": "required|string",
         "name": "required|string", 
         "email": "required|string|email",
