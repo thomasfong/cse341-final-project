@@ -7,12 +7,12 @@ router.get("/", classController.getAll);
 router.get("/:classId", classController.getSingle);
 router.post(
     '/',
-    // validate.saveClass,
+    validate.saveClass,
     classController.createClass
 );
 router.put(
     '/:id',
-    // validate.saveClass,
+    validate.saveClass,
     classController.updateClass
 );
 router.delete(
