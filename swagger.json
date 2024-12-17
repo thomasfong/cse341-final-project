@@ -5,9 +5,10 @@
     "title": "REST API",
     "description": ""
   },
-  "host": "cse341-final-project-xtu9.onrender.com",
+  "host": "localhost:8081",
   "basePath": "/",
   "schemes": [
+    "http",
     "https"
   ],
   "paths": {
@@ -20,6 +21,16 @@
         "responses": {
           "200": {
             "description": "OK"
+          }
+        }
+      }
+    },
+    "/api-docs": {
+      "get": {
+        "description": "",
+        "responses": {
+          "default": {
+            "description": ""
           }
         }
       }
@@ -40,51 +51,10 @@
         }
       },
       "post": {
-        "tags": [
-          "students"
-        ],
         "description": "",
-        "parameters": [
-          {
-            "name": "body",
-            "in": "body",
-            "schema": {
-              "type": "object",
-              "properties": {
-                "name": {
-                  "example": "any"
-                },
-                "age": {
-                  "example": "any"
-                },
-                "email": {
-                  "example": "any"
-                },
-                "classes": {
-                  "example": "any"
-                },
-                "grades": {
-                  "example": "any"
-                },
-                "clubs": {
-                  "example": "any"
-                },
-                "enrollmentDate": {
-                  "example": "any"
-                }
-              }
-            }
-          }
-        ],
         "responses": {
-          "204": {
-            "description": "No Content"
-          },
-          "412": {
-            "description": "Precondition Failed"
-          },
-          "500": {
-            "description": "Internal Server Error"
+          "default": {
+            "description": ""
           }
         }
       }
@@ -165,9 +135,6 @@
           "400": {
             "description": "Bad Request"
           },
-          "412": {
-            "description": "Precondition Failed"
-          },
           "500": {
             "description": "Internal Server Error"
           }
@@ -211,6 +178,18 @@
         "responses": {
           "200": {
             "description": "OK"
+          },
+          "204": {
+            "description": "No Content"
+          },
+          "400": {
+            "description": "Bad Request"
+          },
+          "404": {
+            "description": "Not Found"
+          },
+          "500": {
+            "description": "Internal Server Error"
           }
         }
       },

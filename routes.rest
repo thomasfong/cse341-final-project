@@ -1,1 +1,34 @@
+// LOCALHOST
+
+### Get all student
 GET http://localhost:8081/students
+
+### Get an employee with employee ID 
+GET http://localhost:8081/students
+
+### Create an employee 
+POST http://localhost:8081/students HTTP/1.1 content-type: application/json 
+
+### Update an employee (Double check ID) 
+PUT http://localhost:8081/students HTTP/1.1 content-type: application/json 
+
+### Delete an employee 
+DELETE http://localhost:8081/students HTTP/1.1
+
+// PRODUCTION
+
+### Get all student 
+GET  https://cse341-final-project-xtu9.onrender.com/students
+
+### Get an employee with employee ID 
+GET https://cse341-final-project-xtu9.onrender.com/students
+
+
+### Create an employee 
+POST https://cse341-final-project-xtu9.onrender.com/students HTTP/1.1 content-type: application/json
+
+### Update an employee (Double check ID) 
+PUT https://cse341-final-project-xtu9.onrender.com/students HTTP/1.1 content-type: application/json
+
+### Delete an employee 
+DELETE https://cse341-final-project-xtu9.onrender.com/students HTTP/1.1

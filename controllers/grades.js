@@ -22,7 +22,7 @@ const getSingle = async (req, res) => {
     });
 };
 
-const creategrade = async (req, res) => {
+const createGrade = async (req, res) => {
 
     const { grade_text, grade_type, student_id } = req.body;
     if (!ObjectId.isValid(student_id)) {
@@ -48,7 +48,7 @@ const creategrade = async (req, res) => {
     }
 }
 
-const updategrade = async (req, res) => {
+const updateGrade = async (req, res) => {
 
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid grade id to update a grade.');
@@ -67,7 +67,7 @@ const updategrade = async (req, res) => {
     }
 }
 
-const deletegrade = async (req, res) => {
+const deleteGrade = async (req, res) => {
 
     if (!ObjectId.isValid(req.params.id)) {
         res.status(400).json('Must use a valid grade id to delete a grade.');
@@ -84,7 +84,7 @@ const deletegrade = async (req, res) => {
 module.exports = {
     getAll,
     getSingle,
-    creategrade,
-    updategrade,
-    deletegrade
+    createGrade,
+    updateGrade,
+    deleteGrade
 };

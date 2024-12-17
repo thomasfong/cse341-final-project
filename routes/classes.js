@@ -1,7 +1,7 @@
 const express = require('express');
 const router = express();
 
-const contactsController = require('../controllers/classes');
+const classesController = require('../controllers/classes');
 const validation = require('../middleware/validate');
 
 router.get('/', classesController.getAll);
@@ -12,6 +12,6 @@ router.post('/', validation.saveClass, classesController.createClass);
 
 router.put('/:id', validation.saveClass, ClasssController.updateClass);
 
-router.delete('/:id', ClasssController.deleteContact);
+router.delete('/:id', classsController.deleteContact);
 
 module.exports = router

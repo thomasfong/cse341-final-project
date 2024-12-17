@@ -10,7 +10,7 @@
     "dev": "nodemon server.js"
   },
   "keywords": [],
-  "author": "",
+  "author": "ThomasFong",
   "license": "ISC",
   "dependencies": {
     "autogen": "^0.0.1",
@@ -28,6 +28,13 @@
   },
   "devDependencies": {
     "nodemon": "^3.1.7"
-
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/thomasfong/cse341-final-project.git"
+  },
+  "bugs": {
+    "url": "https://github.com/thomasfong/cse341-final-project/issues"
+  },
+  "homepage": "https://github.com/thomasfong/cse341-final-project#readme"
 }
