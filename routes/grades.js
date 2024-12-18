@@ -2,13 +2,13 @@ const express = require('express');
 const router = express();
 
 const gradesController = require('../controllers/grades');
-const validation = require('../middleware/validate');
+const validation = require('../middleware/validation-middleware');
 
 router.get('/', gradesController.getAll);
 
 router.get('/:id', gradesController.getSingle);
 
-router.post('/', validation.savegrade, gradesController.createGrade);
+router.post('/', validation.saveGrade, gradesController.createGrade);
 
 router.put('/:id', validation.saveGrade, gradesController.updateGrade);
 

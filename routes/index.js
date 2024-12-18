@@ -1,8 +1,10 @@
 const express = require("express")
 const router = new express.Router();
 const students = require('./students');
+const classRouter = require('./class');
+const grades = require('./grades');
+const exams = require('./exams');
 const swaggerRoute = require('./swagger');
-const classRouter = require('./class')
 
 router.use('/', swaggerRoute);
 
@@ -12,6 +14,9 @@ router.get('/', (req, res) => {
 });
 
 router.use('/students', students);
-router.use('/classes', classRouter);
+router.use('/class', classRouter);
+router.use('/grades', grades);
+router.use('/exams', exams);
+
 
 module.exports = router;

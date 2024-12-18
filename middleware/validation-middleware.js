@@ -46,8 +46,58 @@ const saveClass = async (req, res, next) => {
     }).catch( err => console.log(err))
 }
 
+const saveGrade = async (req, res, next) => {
+    const validationRule = {
+        "_Id": "required|string",
+        "studentId": "required|string", 
+        "classId": "required|string",
+        "grade": "required|string", 
+        "semester" : "required|string", 
+        "remarks": "required|string", 
+    };
+
+    await validator(req.body, validationRule, {}, (err, status) => {
+        if (!status) {
+            res.status(412)
+                .send({
+                    success: false,
+                    message: 'Invalid grade info',
+                    data: err
+                });
+        } else {
+            next();
+        }
+    }).catch( err => console.log(err))
+}
+
+const saveExam = async (req, res, next) => {
+    const validationRule = {
+        "_Id": "required|string",
+        "name": "required|string", 
+        "description": "required|string",
+        "president": "required|string", 
+        "meetingSchedule" : "required|string", 
+        "location": "required|string", 
+    };
+
+    await validator(req.body, validationRule, {}, (err, status) => {
+        if (!status) {
+            res.status(412)
+                .send({
+                    success: false,
+                    message: 'Invalid exam info',
+                    data: err
+                });
+        } else {
+            next();
+        }
+    }).catch( err => console.log(err))
+}
+
 
 module.exports = {
     saveStudent,
-    saveClass
+    saveClass,
+    saveGrade,
+    saveExam
 };
